@@ -6,15 +6,13 @@ namespace Lottery.Web.Controllers;
 [Route("tickets")]
 public class TicketController : ControllerBase
 {
-    private readonly ILogger<TicketController> logger;
     private readonly TicketRepository ticketRepository;
     private readonly UserRepository userRepository;
 
-    public TicketController(TicketRepository ticketRepository, UserRepository userRepository, ILogger<TicketController> logger)
+    public TicketController(TicketRepository ticketRepository, UserRepository userRepository)
     {
         this.ticketRepository = ticketRepository;
         this.userRepository = userRepository;
-        this.logger = logger;
     }
 
     [HttpGet(Name = "GetTickets")]
