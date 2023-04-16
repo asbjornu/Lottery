@@ -8,4 +8,6 @@ public class Ticket
     }
 
     public string Number { get; set; }
+
+    public string? PurchasedBy { get; set; }
 }

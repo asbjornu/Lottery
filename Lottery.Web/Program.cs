@@ -3,6 +3,7 @@ using Lottery.Web;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<TicketRepository>();
+builder.Services.AddSingleton<UserRepository>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
